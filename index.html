@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]> <html lang="en-US" prefix="og: http://ogp.me/ns#" class="ie9 loading-site no-js"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en-US" prefix="og: http://ogp.me/ns#" class="ie8 loading-site no-js"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en-US" prefix="og: http://ogp.me/ns#" class="loading-site no-js"> <!--<![endif]-->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<link rel="profile" href="../gmpg.org/xfn/11.html" />
+	<link rel="pingback" href="xmlrpc.php" />
+
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Ponder - Play Matchmaker, Make Love Happen on iOS and Android</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v5.4.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Whether you&#039;re single or married, Ponder is a fun way to test your matchmaking skills, find a quality match, or simply earn some dough."/>
+<meta name="robots" content="index,nofollow"/>
+<link rel="canonical" href="https://ponderapp.co/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ponder - Play Matchmaker, Make Love Happen on iOS and Android" />
+<meta property="og:description" content="Whether you&#039;re single or married, Ponder is a fun way to test your matchmaking skills, find a quality match, or simply earn some dough." />
+<meta property="og:url" content="https://ponderapp.co/" />
+<meta property="og:site_name" content="Ponder" />
+<meta property="og:image" content="https://ponderapp.co/wp-content/uploads/2017/09/ponder_textonly.svg" />
+<meta property="og:image:secure_url" content="https://ponderapp.co/wp-content/uploads/2017/09/ponder_textonly.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Whether you&#039;re single or married, Ponder is a fun way to test your matchmaking skills, find a quality match, or simply earn some dough." />
+<meta name="twitter:title" content="Ponder - Play Matchmaker, Make Love Happen on iOS and Android" />
+<meta name="twitter:image" content="https://ponderapp.co/wp-content/uploads/2017/09/ponder_textonly.svg" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/ponderapp.co\/","name":"Ponder App","potentialAction":{"@type":"SearchAction","target":"https:\/\/ponderapp.co\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/ponderapp.co\/","sameAs":[],"@id":"#organization","name":"Ponder","logo":"https:\/\/ponderapp.co\/wp-content\/uploads\/2017\/09\/ponder_textonly.svg"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Ponder &raquo; Feed" href="https://ponderapp.co/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ponder &raquo; Comments Feed" href="https://ponderapp.co/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/ponderapp.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='https://ponderapp.co/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.9' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-icons-css'  href='https://ponderapp.co/wp-content/themes/flatsome/assets/css/fl-icons.css?ver=3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-main-css'  href='https://ponderapp.co/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.3.8' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-style-css'  href='https://ponderapp.co/wp-content/themes/ponder-child/style.css?ver=3.3.8' type='text/css' media='all' />
+<script type='text/javascript' src='https://ponderapp.co/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://ponderapp.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='https://ponderapp.co/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ponderapp.co/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://ponderapp.co/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.3" />
+<link rel='shortlink' href='https://ponderapp.co/' />
+<link rel="alternate" type="application/json+oembed" href="https://ponderapp.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fponderapp.co%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://ponderapp.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fponderapp.co%2F&amp;format=xml" />
+<style>.bg{opacity: 0; transition: opacity 1s; -webkit-transition: opacity 1s;} .bg-loaded{opacity: 1;}</style><!--[if IE]><link rel="stylesheet" type="text/css" href="https://ponderapp.co/wp-content/themes/flatsome/assets/css/ie-fallback.css"><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><script>var head = document.getElementsByTagName('head')[0],style = document.createElement('style');style.type = 'text/css';style.styleSheet.cssText = ':before,:after{content:none !important';head.appendChild(style);setTimeout(function(){head.removeChild(style);}, 0);</script><script src="https://ponderapp.co/wp-content/themes/flatsome/assets/libs/ie-flexibility.js"></script><![endif]-->    <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ "Lato:regular,700","Lato:regular,400","Pacifico:regular,700","Pacifico", ] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })(); </script>
+  <style id="custom-css" type="text/css">:root {--primary-color: #1B72FD;}/* Site Width */.header-main{height: 100px}#logo img{max-height: 100px}#logo{width:265px;}.header-top{min-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 100px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.header-bottom {background-color: #f1f1f1}.header-main .nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 70px}#logo img{max-height: 70px}}.nav-dropdown-has-arrow li.has-dropdown:before{border-bottom-color: #2161D1;}.nav .nav-dropdown{border-color: #2161D1 }.nav-dropdown{border-radius:10px}.nav-dropdown{font-size:111%}.nav-dropdown-has-arrow li.has-dropdown:after{border-bottom-color: #1B72FD;}.nav .nav-dropdown{background-color: #1B72FD}/* Color */.accordion-title.active, .has-icon-bg .icon .icon-inner,.logo a, .primary.is-underline, .primary.is-link, .badge-outline .badge-inner, .nav-outline > li.active> a,.nav-outline >li.active > a, .cart-icon strong,[data-color='primary'], .is-outline.primary{color: #1B72FD;}/* Color !important */[data-text-color="primary"]{color: #1B72FD!important;}/* Background */.scroll-to-bullets a,.featured-title, .label-new.menu-item > a:after, .nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,button[type="submit"], .button.wc-forward:not(.checkout):not(.checkout-button), .button.submit-button, .button.primary:not(.is-outline),.featured-table .title,.is-outline:hover, .has-icon:hover .icon-label,.nav-dropdown-bold .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold > li > a:hover, .nav-dropdown-bold.dark .nav-column li > a:hover, .nav-dropdown.nav-dropdown-bold.dark > li > a:hover, .is-outline:hover, .tagcloud a:hover,.grid-tools a, input[type='submit']:not(.is-form), .box-badge:hover .box-text, input.button.alt,.nav-box > li > a:hover,.nav-box > li.active > a,.nav-pills > li.active > a ,.current-dropdown .cart-icon strong, .cart-icon:hover strong, .nav-line-bottom > li > a:before, .nav-line-grow > li > a:before, .nav-line > li > a:before,.banner, .header-top, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover, .button.primary:not(.is-outline), input[type='submit'].primary, input[type='submit'].primary, input[type='reset'].button, input[type='button'].primary, .badge-inner{background-color: #1B72FD;}/* Border */.nav-vertical.nav-tabs > li.active > a,.scroll-to-bullets a.active,.nav-pagination > li > .current,.nav-pagination > li > span:hover,.nav-pagination > li > a:hover,.has-hover:hover .badge-outline .badge-inner,.accordion-title.active,.featured-table,.is-outline:hover, .tagcloud a:hover,blockquote, .has-border, .cart-icon strong:after,.cart-icon strong,.blockUI:before, .processing:before,.loading-spin, .slider-nav-circle .flickity-prev-next-button:hover svg, .slider-nav-circle .flickity-prev-next-button:hover .arrow, .primary.is-outline:hover{border-color: #1B72FD}.nav-tabs > li.active > a{border-top-color: #1B72FD}/* Fill */.slider .flickity-prev-next-button:hover svg,.slider .flickity-prev-next-button:hover .arrow{fill: #1B72FD;}/* Background Color */[data-icon-label]:after, .secondary.is-underline:hover,.secondary.is-outline:hover,.icon-label,.button.secondary:not(.is-outline),.button.alt:not(.is-outline), .badge-inner.on-sale, .button.checkout, .single_add_to_cart_button{ background-color:#FF3333; }/* Color */.secondary.is-underline,.secondary.is-link, .secondary.is-outline,.stars a.active, .star-rating:before, .woocommerce-page .star-rating:before,.star-rating span:before, .color-secondary{color: #FF3333}/* Color !important */[data-text-color="secondary"]{color: #FF3333!important;}/* Border */.secondary.is-outline:hover{border-color:#FF3333}body{font-family:"Lato", sans-serif}body{font-weight: 400}body{color: #4F4F4F}.nav > li > a {font-family:"Pacifico", sans-serif;}.nav > li > a {font-weight: 700;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: "Lato", sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2{font-weight: 700;}.section-title span{text-transform: none;}h3.widget-title{text-transform: none;}button,.button{text-transform: none;}.nav > li > a, .links > li > a{text-transform: none;}.alt-font{font-family: "Pacifico", sans-serif;}a{color: #1B72FD;}a:hover{color: #1BA6FC;}.tagcloud a:hover{border-color: #1BA6FC;background-color: #1BA6FC;}.widget a{color: #1B72FD;}.widget a:hover{color: #1CBEFF;}.widget .tagcloud a:hover{border-color: #1CBEFF; background-color: #1CBEFF;}.footer-2{background-color: #FFFFFF}.absolute-footer, html{background-color: #FFFFFF}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style></head>
+
+<body data-rsssl=1 class="home page-template page-template-page-transparent-header-home page-template-page-transparent-header-home-php page page-id-4 lightbox nav-dropdown-has-arrow">
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+
+
+
+<div class="page-loader fixed fill z-top-3 ">
+
+
+
+
+    <div class="page-loader-inner x50 y50 md-y50 md-x50 lg-y50 lg-x50 absolute" >
+        <div class="page-loader-spin">
+            <div class="custom-preloader">
+                <div class="preloader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    <defs>
+                        <filter id="love">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="love" />
+                            <feBlend in="SourceGraphic" in2="love" />
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+	<div class="page-loader-inner x50 y50 md-y50 md-x50 lg-y50 lg-x50 absolute" style="display:none;">
+		<div class="page-loader-logo" style="padding-bottom: 30px;">
+	    	<!-- Header logo -->
+<a href="https://ponderapp.co/" title="Ponder - Matchmaking Game" rel="home">
+    <img width="265" height="100" src="https://ponderapp.co/wp-content/uploads/2017/08/ponder-logo.svg" class="header_logo header-logo" alt="Ponder"/><img  width="265" height="100" src="https://ponderapp.co/wp-content/uploads/2017/08/ponder-logo.svg" class="header-logo-dark" alt="Ponder"/></a>
+	    </div>
+		<div class="page-loader-spin"><div class="loading-spin"></div></div>
+	</div>
+	<style scope="scope">
+		.page-loader{opacity: 0; transition: opacity .3s; transition-delay: .3s;
+			background-color: #fff;
+		}
+		.loading-site .page-loader{opacity: .98;}
+		.page-loader-logo{max-width: px; animation: pageLoadZoom 1.3s ease-out; -webkit-animation: pageLoadZoom 1.3s ease-out;}
+		.page-loader-spin{animation: pageLoadZoomSpin 1.3s ease-out;}
+		.page-loader-spin .loading-spin{width: 40px; height: 40px; }
+		@keyframes pageLoadZoom {
+		    0%   {opacity:0; transform: translateY(30px);}
+		    100% {opacity:1; transform: translateY(0);}
+		}
+		@keyframes pageLoadZoomSpin {
+		    0%   {opacity:0; transform: translateY(60px);}
+		    100% {opacity:1; transform: translateY(0);}
+		}
+	</style>
+</div>
+
+<header id="header" class="header transparent has-transparent has-sticky sticky-jump">
+   <div class="header-wrapper">
+	<div id="masthead" class="header-main show-logo-center">
+      <div class="header-inner flex-row container logo-center medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            <!-- Header logo -->
+<a href="https://ponderapp.co/" title="Ponder - Matchmaking Game" rel="home">
+    <img width="265" height="100" src="https://ponderapp.co/wp-content/uploads/2017/08/ponder-logo.svg" class="header_logo header-logo" alt="Ponder"/><img  width="265" height="100" src="https://ponderapp.co/wp-content/uploads/2017/08/ponder-logo.svg" class="header-logo-dark" alt="Ponder"/></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li id="menu-item-251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-251 has-dropdown"><a href="#" class="nav-top-link">What Is Ponder?<i class="icon-angle-down" ></i></a>
+<ul class='nav-dropdown nav-dropdown-default dark'>
+	<li id="menu-item-333" class="column-title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-333 nav-dropdown-col"><a href="#">column-title</a>
+	<ul class='nav-column nav-dropdown-default dark'>
+		<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-88"><a href="https://ponderapp.co/about/">About</a></li>
+		<li id="menu-item-370" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-370"><a href="https://ponderapp.co/faq/">FAQ</a></li>
+		<li id="menu-item-346" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-346"><a href="https://ponderapp.co/terms-and-privacy/">Terms and Privacy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-338" class="menu-item menu-item-type-gs_sim menu-item-object-gs_sim  menu-item-338">
+  <div class="banner has-hover" id="banner-1659735668">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill" >
+            <div class="bg fill bg-fill "></div>
+                                    
+                    </div><!-- bg-layers -->
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-1138848532" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text dark">
+              
+              <div class="text-inner text-left">
+                  
+<h3 class="uppercase"><strong>Where Matchmakers</strong></h3>
+make love happen
+
+              </div>
+           </div><!-- text-box-inner -->
+                            
+<style scope="scope">
+
+#text-box-1138848532 {
+  width: 60%;
+}
+#text-box-1138848532 .text {
+  font-size: 100%;
+}
+</style>
+    </div><!-- text-box -->
+ 
+    <div class="img has-hover x100 md-x100 lg-x100 y100 md-y100 lg-y100" id="image_2050843688">
+                <div class="img-inner dark" >
+        <img width="1" height="1" src="https://ponderapp.co/wp-content/uploads/2017/09/ponder_panda_head_corner.svg" class="attachment-large size-large" alt="" />                
+            </div>
+                   
+<style scope="scope">
+
+#image_2050843688 {
+  width: 35%;
+}
+</style>
+    </div>
+    
+
+        </div><!-- .banner-layers -->
+      </div><!-- .banner-inner -->
+
+            
+<style scope="scope">
+
+#banner-1659735668 {
+  padding-top: 53%;
+}
+</style>
+  </div><!-- .banner -->
+
+</li>
+</ul>
+</li>
+<li class="html header-button-1">
+	<div class="header-button">
+	<a href="http://onelink.to/6c6hzm" target="_self" class="button primary"  style="border-radius:99px;">
+    <span>Download it</span>
+  </a>
+	</div>
+</li>
+
+
+            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            ">
+            <ul class="header-nav header-nav-main nav nav-left  nav-uppercase" >
+              <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-251 has-dropdown"><a href="#" class="nav-top-link">What Is Ponder?<i class="icon-angle-down" ></i></a>
+<ul class='nav-dropdown nav-dropdown-default dark'>
+	<li class="column-title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  menu-item-333 nav-dropdown-col"><a href="#">column-title</a>
+	<ul class='nav-column nav-dropdown-default dark'>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-88"><a href="https://ponderapp.co/about/">About</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-370"><a href="https://ponderapp.co/faq/">FAQ</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-346"><a href="https://ponderapp.co/terms-and-privacy/">Terms and Privacy</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-gs_sim menu-item-object-gs_sim  menu-item-338">
+  <div class="banner has-hover" id="banner-1809191058">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill" >
+            <div class="bg fill bg-fill "></div>
+                                    
+                    </div><!-- bg-layers -->
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-1009658665" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text dark">
+              
+              <div class="text-inner text-left">
+                  
+<h3 class="uppercase"><strong>Where Matchmakers</strong></h3>
+make love happen
+
+              </div>
+           </div><!-- text-box-inner -->
+                            
+<style scope="scope">
+
+#text-box-1009658665 {
+  width: 60%;
+}
+#text-box-1009658665 .text {
+  font-size: 100%;
+}
+</style>
+    </div><!-- text-box -->
+ 
+    <div class="img has-hover x100 md-x100 lg-x100 y100 md-y100 lg-y100" id="image_123248682">
+                <div class="img-inner dark" >
+        <img width="1" height="1" src="https://ponderapp.co/wp-content/uploads/2017/09/ponder_panda_head_corner.svg" class="attachment-large size-large" alt="" />                
+            </div>
+                   
+<style scope="scope">
+
+#image_123248682 {
+  width: 35%;
+}
+</style>
+    </div>
+    
+
+        </div><!-- .banner-layers -->
+      </div><!-- .banner-inner -->
+
+            
+<style scope="scope">
+
+#banner-1809191058 {
+  padding-top: 53%;
+}
+</style>
+  </div><!-- .banner -->
+
+</li>
+</ul>
+</li>
+            </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+              <li class="html header-button-1">
+	<div class="header-button">
+	<a href="http://onelink.to/6c6hzm" target="_self" class="button primary"  style="border-radius:99px;">
+    <span>Download it</span>
+  </a>
+	</div>
+</li>
+
+
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+                          </ul>
+          </div>
+
+      </div><!-- .header-inner -->
+     
+      </div><!-- .header-main -->
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div><!-- .header-bg-container -->   </div><!-- header-wrapper-->
+</header>
+
+
+<main id="main" class="">
+
+
+<div id="content" role="main">
+			
+				  <section class="section slot_machine is-full-height" id="section_422597001">
+      <div class="bg section-bg fill bg-fill  bg-loaded" >
+
+        
+        
+        
+        
+        
+        
+
+      </div><!-- .section-bg -->
+
+      <div class="section-content relative">
+        
+<div class="row align-middle slot-container"  id="row-1682351228">
+<div class="col slot-1 medium-4 small-4 large-4"  ><div class="col-inner"  >
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1065149774">
+                <div class="img-inner dark" >
+        <img width="102" height="1024" src="https://ponderapp.co/wp-content/uploads/2017/09/slot_01-102x1024.png" class="attachment-large size-large" alt="" srcset="https://ponderapp.co/wp-content/uploads/2017/09/slot_01-102x1024.png 102w, https://ponderapp.co/wp-content/uploads/2017/09/slot_01-30x300.png 30w" sizes="(max-width: 102px) 100vw, 102px" />                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2094172419">
+                <div class="img-inner dark" >
+        <img width="391" height="390" src="https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-girl.png" class="attachment-large size-large" alt="" srcset="https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-girl.png 391w, https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-girl-150x150.png 150w, https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-girl-300x300.png 300w" sizes="(max-width: 391px) 100vw, 391px" />                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+</div></div>
+<div class="col slot-2 medium-4 small-4 large-4"  ><div class="col-inner"  >
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_77933644">
+                <div class="img-inner dark" >
+        <img width="102" height="1024" src="https://ponderapp.co/wp-content/uploads/2017/09/slot_02-102x1024.png" class="attachment-large size-large" alt="" srcset="https://ponderapp.co/wp-content/uploads/2017/09/slot_02-102x1024.png 102w, https://ponderapp.co/wp-content/uploads/2017/09/slot_02-30x300.png 30w" sizes="(max-width: 102px) 100vw, 102px" />                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1694395062">
+                <div class="img-inner dark" >
+        <img width="1" height="1" src="https://ponderapp.co/wp-content/uploads/2017/09/heart_red.svg" class="attachment-large size-large" alt="" />                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+</div></div>
+<div class="col slot-3 medium-4 small-4 large-4"  ><div class="col-inner"  >
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_225965195">
+                <div class="img-inner dark" >
+        <img width="102" height="1024" src="https://ponderapp.co/wp-content/uploads/2017/09/slot_03-102x1024.png" class="attachment-large size-large" alt="" srcset="https://ponderapp.co/wp-content/uploads/2017/09/slot_03-102x1024.png 102w, https://ponderapp.co/wp-content/uploads/2017/09/slot_03-30x300.png 30w" sizes="(max-width: 102px) 100vw, 102px" />                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+    <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1242558147">
+                <div class="img-inner dark" >
+        <img width="391" height="390" src="https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-guy.png" class="attachment-large size-large" alt="" srcset="https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-guy.png 391w, https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-guy-150x150.png 150w, https://ponderapp.co/wp-content/uploads/2017/09/slot_01-–-guy-300x300.png 300w" sizes="(max-width: 391px) 100vw, 391px" />                
+            </div>
+                   
+<style scope="scope">
+
+</style>
+    </div>
+    
+</div></div>
+
+<style scope="scope">
+
+</style>
+</div>
+<div class="row slot-text-1"  id="row-749433389">
+<div class="col small-12 large-12"  ><div class="col-inner"  >
+<h1 class="thin-font" style="text-align: center;">PLAY MATCHMAKER</h1>
+<h1 class="thin-font" style="text-align: center;">Earn money &amp; gratitude</h1>
+<h1 class="thin-font" style="text-align: center;">Get $10 per match. $1000 per marriage.</h1>
+<h1 class="thin-font" style="text-align: center;">If you’re single, get matched a better way&#8230;</h1>
+<h1 class="thin-font" style="text-align: center;">&#8230;through mutual friends and other matchmakers</h1>
+<p> </p>
+</div></div>
+
+<style scope="scope">
+
+</style>
+</div>
+      </div><!-- .section-content -->
+
+      
+<style scope="scope">
+
+#section_422597001 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+</style>
+  </section>
+  
+			
+			</div>
+
+
+
+</main><!-- #main -->
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+
+
+<!-- FOOTER 2 -->
+
+
+
+<div class="absolute-footer light medium-text-center small-text-center">
+  <div class="container clearfix">
+
+          <div class="footer-secondary pull-right">
+                  <div class="footer-text inline-block small-block">
+            Copyright 2017 &copy; <strong>Ponder App</strong> Formally known as Spritzr          </div>
+                      </div><!-- -right -->
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+              </div>
+          </div><!-- .left -->
+  </div><!-- .container -->
+</div><!-- .absolute-footer -->
+<a href="#top" class="back-to-top button invert plain is-outline hide-for-medium icon circle fixed bottom z-1" id="top-link"><i class="icon-angle-up" ></i></a>
+
+</footer><!-- .footer-wrapper -->
+
+</div><!-- #wrapper -->
+
+<!-- Mobile Sidebar -->
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+    <div class="sidebar-menu no-scrollbar ">
+        <ul class="nav nav-sidebar  nav-vertical nav-uppercase">
+              <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative form- is-normal"><form method="get" class="searchform" action="https://ponderapp.co/" role="search">
+		<div class="flex-row relative">
+			<div class="flex-col flex-grow">
+	   	   <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="Search&hellip;" />
+			</div><!-- .flex-col -->
+			<div class="flex-col">
+				<button type="submit" class="ux-search-submit submit-button secondary button icon mb-0">
+					<i class="icon-search" ></i>				</button>
+			</div><!-- .flex-col -->
+		</div><!-- .flex-row -->
+    <div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-251"><a href="#" class="nav-top-link">What Is Ponder?</a>
+<ul class=children>
+	<li class="column-title menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-333"><a href="#">column-title</a>
+	<ul class=nav-sidebar-ul>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="https://ponderapp.co/about/">About</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-370"><a href="https://ponderapp.co/faq/">FAQ</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-346"><a href="https://ponderapp.co/terms-and-privacy/">Terms and Privacy</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-338">
+  <div class="banner has-hover" id="banner-1320429093">
+          <div class="banner-inner fill">
+        <div class="banner-bg fill" >
+            <div class="bg fill bg-fill "></div>
+                                    
+                    </div><!-- bg-layers -->
+        <div class="banner-layers container">
+            <div class="fill banner-link"></div>            
+
+   <div id="text-box-1155442286" class="text-box banner-layer x50 md-x50 lg-x50 y50 md-y50 lg-y50 res-text">
+                                <div class="text dark">
+              
+              <div class="text-inner text-left">
+                  
+<h3 class="uppercase"><strong>Where Matchmakers</strong></h3>
+make love happen
+
+              </div>
+           </div><!-- text-box-inner -->
+                            
+<style scope="scope">
+
+#text-box-1155442286 {
+  width: 60%;
+}
+#text-box-1155442286 .text {
+  font-size: 100%;
+}
+</style>
+    </div><!-- text-box -->
+ 
+    <div class="img has-hover x100 md-x100 lg-x100 y100 md-y100 lg-y100" id="image_2085142286">
+                <div class="img-inner dark" >
+        <img width="1" height="1" src="https://ponderapp.co/wp-content/uploads/2017/09/ponder_panda_head_corner.svg" class="attachment-large size-large" alt="" />                
+            </div>
+                   
+<style scope="scope">
+
+#image_2085142286 {
+  width: 35%;
+}
+</style>
+    </div>
+    
+
+        </div><!-- .banner-layers -->
+      </div><!-- .banner-inner -->
+
+            
+<style scope="scope">
+
+#banner-1320429093 {
+  padding-top: 53%;
+}
+</style>
+  </div><!-- .banner -->
+
+</li>
+</ul>
+</li>
+WooCommerce not Found        </ul>
+    </div><!-- inner -->
+</div><!-- #mobile-menu -->
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106837604-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106837604-1');
+</script><script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/ponderapp.co\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://ponderapp.co/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.9'></script>
+<script type='text/javascript' src='https://ponderapp.co/wp-content/themes/flatsome/inc/extensions/flatsome-live-search/flatsome-live-search.js?ver=3.3.8'></script>
+<script type='text/javascript' src='https://ponderapp.co/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var flatsomeVars = {"ajaxurl":"https:\/\/ponderapp.co\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"70"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://ponderapp.co/wp-content/themes/flatsome/assets/js/flatsome.js?ver=3.3.8'></script>
+<script type='text/javascript' src='https://ponderapp.co/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9016305c74","applicationID":"33093157","transactionName":"YlJaY0FVW0NSAkwIWVsYeVRHXVpeHBFZBlMYQ0pWXUdFUUEEVhUbXVJZU1ZGGFhcDF0=","queueTime":0,"applicationTime":128,"atts":"ThVZFQlPSE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<script type="text/javascript" src="https://ponderapp.co/wp-content/themes/ponder-child/js/home_animation.js"></script>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 2079/3309 objects using redis
+Page Caching using redis (SSL caching disabled)
+Database Caching 16/16 queries in 0.004 seconds using redis
+
+ Served from: ponderapp.co @ 2017-11-08 22:41:09 by W3 Total Cache -->
